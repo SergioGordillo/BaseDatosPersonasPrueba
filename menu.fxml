@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="814.0" prefWidth="1221.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.MenuController">
+    <stylesheets>
+        <URL value="@/css/style.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tbpersonas" layoutX="89.0" layoutY="37.0" prefHeight="435.0" prefWidth="1078.0">
+        <columns>
+          <TableColumn fx:id="colnombre" prefWidth="179.0" text="Nombre" />
+          <TableColumn fx:id="colapellidos" prefWidth="180.0" text="Apellidos" />
+            <TableColumn fx:id="colfechanacimiento" minWidth="0.0" prefWidth="232.0" text="Fecha Nacimiento" />
+            <TableColumn fx:id="colprofesion" prefWidth="227.0" text="Profesión" />
+            <TableColumn fx:id="colsexo" prefWidth="259.0" text="Sexo" />
+        </columns>
+      </TableView>
+      <Button fx:id="btagregar" layoutX="255.0" layoutY="508.0" mnemonicParsing="false" onAction="#llevarAgregarPersonas" text="Agregar" />
+      <Button fx:id="btmodificar" layoutX="460.0" layoutY="508.0" mnemonicParsing="false" onAction="#llevarModificarPersonas" text="Modificar" />
+      <Button fx:id="bteliminar" layoutX="682.0" layoutY="508.0" mnemonicParsing="false" onAction="#eliminarPersona" text="Eliminar" />
+      <Button fx:id="btsalir" layoutX="895.0" layoutY="508.0" mnemonicParsing="false" onAction="#salir" text="Salir" />
+      <TextField fx:id="tffiltronombre" layoutX="213.0" layoutY="600.0" onKeyReleased="#filtrarNombre" />
+      <Label layoutX="64.0" layoutY="605.0" text="Filtrar por nombre" />
+      <ComboBox fx:id="cbprofesion" layoutX="658.0" layoutY="600.0" onAction="#filtrarProfesiones" prefWidth="150.0" />
+      <Label layoutX="492.0" layoutY="605.0" text="Filtro por profesiones" />
+      <RadioButton fx:id="rbhombre" layoutX="920.0" layoutY="605.0" mnemonicParsing="false" onAction="#filtroGenero" text="Hombre" />
+      <RadioButton fx:id="rbmujer" layoutX="1057.0" layoutY="605.0" mnemonicParsing="false" onAction="#filtroGenero" text="Mujer" />
+      <DatePicker fx:id="dpfechasinicio" layoutX="214.0" layoutY="677.0" onAction="#filtrarFechasInicio" prefHeight="31.0" prefWidth="187.0" />
+      <DatePicker fx:id="dpfechasfinal" layoutX="659.0" layoutY="677.0" onAction="#filtroFechasFinal" prefHeight="31.0" prefWidth="157.0" />
+      <Button fx:id="btreset" layoutX="906.0" layoutY="677.0" mnemonicParsing="false" onAction="#resetearFiltro" text="Resetear filtro" />
+      <Label layoutX="71.0" layoutY="682.0" text="Filtro por fechas" />
+      <Button fx:id="btagregarprofesiones" layoutX="80.0" layoutY="747.0" mnemonicParsing="false" onAction="#agregarProfesiones" text="Agregar Profesiones" />
+   </children>
+</AnchorPane>

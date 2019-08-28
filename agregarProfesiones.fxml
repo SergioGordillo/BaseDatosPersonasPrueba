@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="442.0" prefWidth="501.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controlador.AgregarProfesionesController">
+    <stylesheets>
+        <URL value="@/css/style.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="167.0" layoutY="82.0" text="AÑADIR PROFESIÓN">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="214.0" text="Introduce profesión" />
+      <TextField fx:id="tfprofesion" layoutX="262.0" layoutY="209.0" />
+      <Button fx:id="btagregarprofesion" layoutX="88.0" layoutY="368.0" mnemonicParsing="false" onAction="#agregarProfesion" text="Agregar Profesión" />
+      <Button fx:id="btatras" layoutX="304.0" layoutY="368.0" mnemonicParsing="false" onAction="#atras" text="Atrás" />
+   </children>
+</AnchorPane>

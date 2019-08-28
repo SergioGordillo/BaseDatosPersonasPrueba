@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="691.0" prefWidth="604.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.AgregarPersonasController">
+    <stylesheets>
+        <URL value="@/css/style.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="119.0" layoutY="36.0" prefHeight="84.0" prefWidth="380.0" text="AGREGAR O MODIFICAR PERSONAS">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="119.0" layoutY="195.0" text="Nombre" />
+      <Label layoutX="119.0" layoutY="269.0" text="Apellidos" />
+      <Label layoutX="115.0" layoutY="335.0" text="Fecha Nacimiento" />
+      <Label layoutX="115.0" layoutY="415.0" text="Profesión" />
+      <Label layoutX="115.0" layoutY="489.0" text="Sexo" />
+      <TextField fx:id="tfnombre" layoutX="288.0" layoutY="190.0" />
+      <TextField fx:id="tfapellidos" layoutX="288.0" layoutY="264.0" />
+      <DatePicker fx:id="dpfechanacimiento" layoutX="288.0" layoutY="330.0" />
+      <ComboBox fx:id="cbprofesion" layoutX="288.0" layoutY="410.0" prefWidth="150.0" />
+      <RadioButton fx:id="rbhombre" layoutX="288.0" layoutY="489.0" mnemonicParsing="false" text="Hombre" />
+      <RadioButton fx:id="rbmujer" layoutX="442.0" layoutY="489.0" mnemonicParsing="false" text="Mujer" />
+      <Button fx:id="btagregar" layoutX="174.0" layoutY="581.0" mnemonicParsing="false" onAction="#agregarPersona" text="Agregar" />
+      <Button fx:id="btatras" layoutX="382.0" layoutY="581.0" mnemonicParsing="false" onAction="#atras" text="Atrás" />
+      <Button fx:id="btmodificar" layoutX="174.0" layoutY="581.0" mnemonicParsing="false" onAction="#modificarPersonas" prefHeight="31.0" prefWidth="95.0" text="Modificar" />
+   </children>
+</AnchorPane>
